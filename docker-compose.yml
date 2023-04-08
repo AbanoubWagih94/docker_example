@@ -3,7 +3,7 @@ services:
   node-app:
     container_name: node-app-container
     depends_on:
-      - postgres
+      - mongo 
       - redis
     env_file:
       - ./.env
