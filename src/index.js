@@ -18,14 +18,14 @@ const app = express();
 //     .then(() => console.log('connect to postgres databse'))
 //     .catch((err) => console.log(err));
 
-const DB_USER = 'root';
-const DB_PASSWORD = 'example';
-const DB_PORT = 27017;
-const DB_HOST = 'mongo';
-const URI = `mongodb://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}`;
-mongoose.connect(URI)
-    .then(() => console.log('connect to databse using docker hub'))
-    .catch((err) => console.log(err));
+// const DB_USER = 'root';
+// const DB_PASSWORD = 'example';
+// const DB_PORT = 27017;
+// const DB_HOST = 'mongo';
+// const URI = `mongodb://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}`;
+// mongoose.connect(URI)
+//     .then(() => console.log('connect to databse using docker hub'))
+//     .catch((err) => console.log(err));
 
 
 
