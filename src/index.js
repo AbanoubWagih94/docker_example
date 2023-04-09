@@ -24,7 +24,7 @@ const DB_PORT = 27017;
 const DB_HOST = 'mongo';
 const URI = `mongodb://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}`;
 mongoose.connect(URI)
-    .then(() => console.log('connect to databse'))
+    .then(() => console.log('connect to databse using docker hub'))
     .catch((err) => console.log(err));
 
 
