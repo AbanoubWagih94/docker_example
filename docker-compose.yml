@@ -1,22 +1,23 @@
 version: '3'
 services:
   node-app:
-    container_name: node-app-container
+    #container_name: node-app-container
     image: abanoubwagih94/express_node
     depends_on:
       - redis
+      - mongo
     env_file:
       - ./.env
-    ports: 
-      - "4000:4000"
-  # mongo:
-  #   image: mongo
-  #   restart: always
-  #   volumes:
-  #     - mongo-db:/data/db
-  #   environment:
-  #     MONGO_INITDB_ROOT_USERNAME: root
-  #     MONGO_INITDB_ROOT_PASSWORD: example      
+    # ports: 
+    #   - "4000:4000"
+  mongo:
+    image: mongo
+    restart: always
+    volumes:
+      - mongo-db:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example      
   # mongo-express:
   #   image: mongo-express
   #   restart: always
@@ -43,9 +44,9 @@ services:
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
     ports:
-      - "8080:80"
+      - "80:80"
     depends_on:
       - node-app  
-# volumes:
-#   mongo-db:      
+volumes:
+  mongo-db:      
 #   postgres-db:      

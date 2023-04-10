@@ -8,6 +8,6 @@ services:
       #   - NODE_ENV=prod
     environment:
       - NODE_ENV=PROD
-    command: npm run start
+    command: npm start
 
         
