@@ -38,11 +38,11 @@ client.connect();
 app.get('/', (req, res) => {
     client.set('products', 'products....')
     console.log(`traffic from ${os.hostname}`);
-    res.send('<h1>Hello dasd a</h1>')
+    res.send('<h1>Hello abanoub wagih</h1>')
 })
 app.get('/data', async (req, res) => {
     const products = await client.get('products');
 
-    res.send(`<h1>Hello dasd a</h1> <h2>${products}</h2>`)
+    res.send(`<h1>Hello abanoub a</h1> <h2>${products}</h2>`)
 })
 app.listen(PORT, () => console.log('app is running asdasdas'));
