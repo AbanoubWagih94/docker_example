@@ -10,14 +10,14 @@ services:
       - ./.env
     deploy:
       replicas: 4
-    # placement:
-    #   max_replicas_per_node: 1
-    update_config:
-      parallelism: 2
-      delay: 5s
-    restart_policy:
-      condition: on-failure
-      delay: 5s      
+      # placement:
+      #   max_replicas_per_node: 1
+      update_config:
+        parallelism: 2
+        delay: 5s
+      restart_policy:
+        condition: on-failure
+        delay: 5s      
     # ports: 
     #   - "4000:4000"
   mongo:
